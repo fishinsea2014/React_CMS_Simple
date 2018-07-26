@@ -13,7 +13,7 @@ class Container extends React.Component {
     theme: 'dark',
     current: 'index',
     collapsed: false,
-    mode: 'inline',  // 水平垂直展现
+    mode: 'inline',  // Vertical
   }
   componentDidMount() {
     this.handleClick([], 'index')

@@ -15,7 +15,7 @@ class LoginPage extends React.Component {
         let n = this.props.form.getFieldsValue().username;
         let p = this.props.form.getFieldsValue().password;
         if (n === '123' && p === '123') {
-            // 表单的路由处理
+            // Routes in the form
             //history.push('/index');
             fakeAuth.authenticate(() => {
                 this.setState({redirectToReferrer: true});
@@ -26,11 +26,11 @@ class LoginPage extends React.Component {
     }
 
 
-    // 返回一个弹框对象，提示用户名和密码
+    // The tips of username and password
     openNotificationWithIcon = (type) => {
         return notification[type]({
-                 message: '用户名&密码',
-                 description: '都是：123',
+                 message: 'Test user name and pwd are all 123',
+                 description: 'Is 123',
                  duration: 6,
                  icon: <Icon type="smile-circle" style={{ color: '#108ee9' }} />,
                })
@@ -58,14 +58,14 @@ class LoginPage extends React.Component {
                         <Form onSubmit={this.handleSubmit}>
                             <FormItem>
                                 {getFieldDecorator('username', {
-                                    rules: [{ required: true, message: '请输入用户名' }],
+                                    rules: [{ required: true, message: 'Input User name' }],
                                 })(
                                     <Input placeholder="Username" />
                                 )}
                             </FormItem>
                             <FormItem>
                                 {getFieldDecorator('password', {
-                                    rules: [{ required: true, message: '请输入密码' }],
+                                    rules: [{ required: true, message: 'Input Password' }],
                                 })(
                                     <Input type="password" placeholder="Password" />
                                 )}
