@@ -7,3 +7,5 @@
 
 + SCREENSHOT
 ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/home.jpg)
+
+![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/login.jpg)
