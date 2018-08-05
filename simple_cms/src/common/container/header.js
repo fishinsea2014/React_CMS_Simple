@@ -1,42 +1,22 @@
 import React from 'react'
 import { Menu, Icon, Layout } from 'antd'
 import { Link } from 'react-router-dom'
-// import * as screenfull from 'screenfull'
 import './header.scss'
 
 const SubMenu = Menu.SubMenu
 const { Header } = Layout
 
-export default class Top extends React.Component {
+class Top extends React.Component {
+    
     constructor(props) {
         super(props)
         this.state = {
-            username: ''
+            username: localStorage.getItem('name') || ""
         }
     }
 
-    componentDidMount() {
-        this.getUser()
-    }
-
-    getUser = () => {
-        this.setState({
-            username: 'Muyy'
-        })
-    }
-
-    clear = (item) => {
-        if (item.key === 'logOut') {
-            this.props.clear()
-        }
-    }
-
-    // screenFull = () => {
-    //     if (screenfull.enabled) {
-    //         screenfull.request();
-    //     }
-    // }
     render() {
+        //debugger;
         return (
             <Header style={{ background: '#fff'}}>
                 <Icon
@@ -44,17 +24,16 @@ export default class Top extends React.Component {
                     type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
                     onClick={this.props.toggle}
                 />
-                <Menu mode="horizontal" className="logOut" onClick={this.clear}>
+                <Menu mode="horizontal" className="logOut" >
                     <SubMenu title={<span><Icon type="user" />{ this.state.username }</span>} >
-                        <Menu.Item key="logOut"><Link to="/login" >Quit</Link></Menu.Item>
+                        <Menu.Item key="logOut">
+                            <Link to="/login" >Quit</Link>
+                        </Menu.Item>
                     </SubMenu>
-                </Menu>
-                {/* <Icon
-                    className="screenFull"
-                    type="arrows-alt"
-                    onClick={this.screenFull}
-                /> */}
+                </Menu>                
             </Header>
         );
     }
 }
+
+export default Top;

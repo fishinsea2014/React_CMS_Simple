@@ -30,8 +30,13 @@ export default class Bottom extends React.Component {
         return (
             <Footer className="bottom animated bounceInLeft">
                 <div className="text">
-                    <div><span className="me">@User</span>
-                        <span className="stay">You already in the Home<span className="time">{this.state.timer}</span> 秒</span></div>
+                    <div>
+                        <span className="me">Hello, {localStorage.getItem('userName')} </span>
+                        <span className="stay">You have stayed in the CDIG CMS for 
+                            <span className="time">{this.state.timer}</span> 
+                            Second 
+                        </span>
+                    </div>
                 </div>
             </Footer>
         );
