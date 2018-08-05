@@ -22,7 +22,7 @@ class Top extends React.Component {
                 <Icon
                     className="trigger"
                     type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
-                    onClick={this.props.toggle}
+                    onClick={this.props.handleCollapse}
                 />
                 <Menu mode="horizontal" className="logOut" >
                     <SubMenu title={<span><Icon type="user" />{ this.state.username }</span>} >

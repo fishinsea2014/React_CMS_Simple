@@ -17,6 +17,13 @@ class Container extends React.Component {
     collapsed: false,
     mode: 'inline',  // Vertical
   }
+
+  toggleCollapsed = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
+
   componentDidMount() {
     this.handleClick([], 'index')
   }
@@ -92,7 +99,7 @@ class Container extends React.Component {
           </div>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
+          <Header style={{ background: '#fff', padding: 0 }} handleCollapse={this.toggleCollapsed.bind(this)}  />
           <Content style={{ margin: '24px 16px 0' }}>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
               content
