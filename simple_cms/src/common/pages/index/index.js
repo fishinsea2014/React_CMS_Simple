@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Menu, Icon, Switch, Layout } from 'antd'
-import { allMenu } from '../utils/menu'
-import Header from './header'
+import { allMenu } from '../../utils/menu'
+import Header from './top'
 import Content from './content'
 import Footer from './bottom'
 import './index.scss'
@@ -10,7 +10,7 @@ import './index.scss'
 const SubMenu = Menu.SubMenu;
 const {  Sider } = Layout;
 
-class Container extends React.Component {
+class Index extends React.Component {
   state = {
     theme: 'dark',
     current: 'index',
@@ -113,4 +113,4 @@ class Container extends React.Component {
     );
   }
 }
-export default Container;
+export default Index;

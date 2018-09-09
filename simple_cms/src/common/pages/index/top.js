@@ -1,7 +1,7 @@
 import React from 'react'
 import { Menu, Icon, Layout } from 'antd'
 import { Link } from 'react-router-dom'
-import './header.scss'
+import './top.scss'
 
 const SubMenu = Menu.SubMenu
 const { Header } = Layout
