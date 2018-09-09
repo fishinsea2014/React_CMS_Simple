@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import { Menu, Icon, Switch, Layout } from 'antd'
 import { allMenu } from '../utils/menu'
+import Header from './header'
+import Content from './content'
+import Footer from './bottom'
 import './index.scss'
 
 const SubMenu = Menu.SubMenu;
-//const { Sider } = Layout
-const { Header, Content, Footer, Sider } = Layout;
+const {  Sider } = Layout;
 
 class Container extends React.Component {
   state = {
@@ -15,6 +17,13 @@ class Container extends React.Component {
     collapsed: false,
     mode: 'inline',  // Vertical
   }
+
+  toggleCollapsed = () => {
+    this.setState({
+      collapsed: !this.state.collapsed,
+    });
+  }
+
   componentDidMount() {
     this.handleClick([], 'index')
   }
@@ -50,7 +59,7 @@ class Container extends React.Component {
         >
           {this.state.theme === 'light' ? <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github" /></a> :
             <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github white" /></a> }
-          { this.state.theme === 'light' ? <span className="author">ruanmou</span> : <span className="author white">ruanmou</span> }
+          { this.state.theme === 'light' ? <span className="author">CDIG CMS</span> : <span className="author white">CDIG CMS</span> }
           <Menu
             theme={this.state.theme}
             onClick={this.handleClick}
@@ -90,7 +99,7 @@ class Container extends React.Component {
           </div>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
+          <Header style={{ background: '#fff', padding: 0 }} handleCollapse={this.toggleCollapsed.bind(this)}  />
           <Content style={{ margin: '24px 16px 0' }}>
             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
               content

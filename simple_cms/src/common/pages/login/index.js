@@ -1,25 +1,21 @@
 import React from 'react';
 import { Form, Input, Button, notification, Icon } from 'antd';
 import { Redirect } from 'react-router-dom'
-import fakeAuth from '../../utils/fakeAuth'
 import './index.scss'
 
 const FormItem = Form.Item; 
 
 class LoginPage extends React.Component {
-    state = {
-        redirectToReferrer: false
-    }
+    
     handleSubmit = (e) => {
         e.preventDefault();
-        let n = this.props.form.getFieldsValue().username;
-        let p = this.props.form.getFieldsValue().password;
-        if (n === '123' && p === '123') {
+        let userName = this.props.form.getFieldsValue().username;
+        let pwd = this.props.form.getFieldsValue().password;
+        if (userName === '123' && pwd === '123') {
             // Routes in the form
-            //history.push('/index');
-            fakeAuth.authenticate(() => {
-                this.setState({redirectToReferrer: true});
-            });
+            this.props.history.push('/index');
+            localStorage.setItem('userName',userName);
+           
         } else {
             this.openNotificationWithIcon('info');
         }
@@ -29,7 +25,7 @@ class LoginPage extends React.Component {
     // The tips of username and password
     openNotificationWithIcon = (type) => {
         return notification[type]({
-                 message: 'Test user name and pwd are all 123',
+                 message: 'Both test user name and pwd are 123',
                  description: 'Is 123',
                  duration: 6,
                  icon: <Icon type="smile-circle" style={{ color: '#108ee9' }} />,
@@ -41,19 +37,11 @@ class LoginPage extends React.Component {
     }
 
     render() {
-        const { getFieldDecorator } = this.props.form
-        const {redirectToReferrer} = this.state
-
-        if (redirectToReferrer) {
-          return (
-            <Redirect to='/index' />
-          )
-        }
-
+        const { getFieldDecorator } = this.props.form        
         return (
             <div className="loginpagewrap">
                 <div className="box">
-                    <p>Welcome to the React</p>
+                    <p>Welcome to the CDIG Content Management System</p>
                     <div className="loginWrap">
                         <Form onSubmit={this.handleSubmit}>
                             <FormItem>

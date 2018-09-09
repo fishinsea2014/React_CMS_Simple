@@ -1,5 +1,6 @@
-@import '~antd/dist/antd.css';  
+@import '~antd/dist/antd.css';  //Mzke the antd.css as a global style file.
 $spacer: 1rem;
+$red: red;
 
 body {
   margin: 0;
@@ -23,6 +24,7 @@ body {
 
 .text{
   font-size: 1rem;
+  // color: $red;
 }
 .text-2x{
   font-size: 2rem;
