@@ -1,10 +1,10 @@
 import React from 'react'
 import { Layout } from 'antd'
-import './bottom.scss'
+import './footer.scss'
 
 const { Footer } = Layout
 
-export default class Bottom extends React.Component {
+export default class Footer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {

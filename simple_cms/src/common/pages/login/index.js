@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Input, Button, notification, Icon } from 'antd';
-import { Redirect } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import './login.scss'
 
 const FormItem = Form.Item; 

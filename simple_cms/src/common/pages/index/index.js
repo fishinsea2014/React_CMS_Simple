@@ -1,29 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import { Menu, Icon, Switch, Layout } from 'antd'
-import { allMenu } from '../../utils/menu'
-import Header from './top'
-import Content from './content'
-import Footer from './bottom'
-import './index.scss'
-
+import React, { Component } from 'react';
+import { Layout, Menu, Icon,Switch } from 'antd';
+import {Link } from "react-router-dom";
+import { allMenu } from '../../utils/menu';
+import Top from './top';
+import Content from './content';
+import './index.scss';
+const { Header, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
-const {  Sider } = Layout;
 
-class Index extends React.Component {
-  state = {
-    theme: 'dark',
-    current: 'index',
-    collapsed: false,
-    mode: 'inline',  // Vertical
-  }
-
-  toggleCollapsed = () => {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  }
-
+class Index extends Component {  
+    state = {
+      theme: 'dark',
+      current: 'index',
+      collapsed: false,
+      mode: 'inline',  // Horizontal display
+    }
   componentDidMount() {
     this.handleClick([], 'index')
   }
@@ -47,8 +38,8 @@ class Index extends React.Component {
     this.setState({
       current: e.key || special,
     });
-  }
-  render() {
+  }  
+    render() {
     return (
       <Layout className="containAll">
         <Sider
@@ -59,7 +50,7 @@ class Index extends React.Component {
         >
           {this.state.theme === 'light' ? <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github" /></a> :
             <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github white" /></a> }
-          { this.state.theme === 'light' ? <span className="author">CDIG CMS</span> : <span className="author white">CDIG CMS</span> }
+          { this.state.theme === 'light' ? <span className="author">ruanmou</span> : <span className="author white">ruanmou</span> }
           <Menu
             theme={this.state.theme}
             onClick={this.handleClick}
@@ -68,7 +59,7 @@ class Index extends React.Component {
             className="menu"
             mode={this.state.mode}
           >
-            {
+          {
               allMenu.map((subMenu) => {
                 if (subMenu.children && subMenu.children.length) {
                   return (
@@ -99,14 +90,12 @@ class Index extends React.Component {
           </div>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} handleCollapse={this.toggleCollapsed.bind(this)}  />
-          <Content style={{ margin: '24px 16px 0' }}>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              content
-            </div>
+          <Top toggle={this.toggle} collapsed={this.state.collapsed} history={this.props.history}/> 
+          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+            main main
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            Ant Design ©2016 Created by Ant UED
+            12321432432532
           </Footer>
         </Layout>
       </Layout>

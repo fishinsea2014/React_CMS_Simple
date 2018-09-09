@@ -1,17 +1,21 @@
-import React from 'react';
-import { Route } from 'react-router-dom'
-import { Layout } from 'antd'
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route,Redirect } from "react-router-dom";
+import { Layout } from 'antd';
+import Home from '../home';
+import Music from '../music';
 import './content.scss'
+const { Content } = Layout;
 
-
-const { Content } = Layout
-
-export default class Contents extends React.Component {
+class Contents extends Component {
   render() {
     return (
       <Content className="content">
-        Here is content.
+         <Route path="/index" component={Home}></Route> 
+         <Route path="/music" component={Music}></Route>
+         
       </Content>
     );
   }
 }
+
+export default Contents;
