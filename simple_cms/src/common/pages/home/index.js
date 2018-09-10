@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Row, Col, Card, Icon} from 'antd';
 import EchartsOne from './EchartOne';
+import EchartsTwo from './EchartTwo';
 
 class Home extends Component {
   constructor (props){
@@ -141,6 +142,7 @@ class Home extends Component {
                         <div className="cloud-box">
                             <Card className={'no-padding'}>
                                 {/* <EchartsProjects2  option={this.state.echartData}/> */}
+                                <EchartsTwo />
                             </Card>
                         </div>
                     </Col>

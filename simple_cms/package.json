@@ -7,6 +7,8 @@
     "axios": "^0.18.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "connect": "^3.6.6",
     "draftjs-to-html": "^0.8.3",
     "draftjs-to-markdown": "^0.5.1",
     "echarts": "^4.1.0",
@@ -25,6 +27,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
+    "server-static": "^2.0.5",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
