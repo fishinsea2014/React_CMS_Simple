@@ -24,6 +24,7 @@
     })
     
     .use('/cms_chart', (req, res, next) => {
+        console.log("req: "+ req);
         let data = {
             "code" :"200",
             "msg"  : "success",
@@ -33,7 +34,7 @@
         next();
     })
 
-    .listen(3000);
-    console.log('Server started on port 3000.')
+    .listen(3333);
+    console.log('Server started on port 3333.')
 
 

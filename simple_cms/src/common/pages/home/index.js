@@ -2,12 +2,31 @@ import React, { Component } from 'react';
 import {Row, Col, Card, Icon} from 'antd';
 import EchartsOne from './EchartOne';
 import EchartsTwo from './EchartTwo';
+import {get} from '../utils/request';
 
 class Home extends Component {
   constructor (props){
     super(props);
-
+    this.state = {
+        echartData: []
+    }
   };
+
+  getData = () =>{
+      get ('/cms_chart').then((res) =>{
+          console.log(res);
+          let data = JSON.parse(res);
+          if (data.code == '200'){
+              this.setState({echartData: data.result})
+          }
+      }).catch((err)=>{
+          console.log(err);
+      })
+  }
+
+  componentDidMount(){
+      this.getData();
+  }
 
   
 
@@ -142,7 +161,7 @@ class Home extends Component {
                         <div className="cloud-box">
                             <Card className={'no-padding'}>
                                 {/* <EchartsProjects2  option={this.state.echartData}/> */}
-                                <EchartsTwo />
+                                <EchartsTwo option={this.state.echartData} />
                             </Card>
                         </div>
                     </Col>

@@ -34,9 +34,9 @@ class EchartsOne extends Component {
                 }
             },
             series: [{
-                data: [80, 932, 341, 934, 1290, 1330, 1320],
+                //data: [80, 932, 341, 934, 1290, 1330, 1320],
                 //When retrive data from server, transfer data from parent component, like:
-                // data:this.props.option, 
+                data:this.props.option, 
                 type: 'line'
             }]
         };
