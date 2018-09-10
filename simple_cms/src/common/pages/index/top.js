@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Menu, Icon,Layout} from 'antd';
-import { BrowserRouter as Router, Route,Link } from "react-router-dom";
+//import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 import './top.scss'
 const { Header } = Layout;
 
@@ -23,7 +23,7 @@ class Top extends Component {
   }
   goBack= (e) => {
     localStorage.removeItem('name');  //Clear localStorage
-    this.props.history.push('/login');  //Jamp to login
+    this.props.history.push('/login');  //Jump to login
   }
   render() {
     return (
@@ -39,7 +39,7 @@ class Top extends Component {
           mode="horizontal"
         >
           <SubMenu title={<span><Icon type="setting" />{this.state.username}</span>}>
-          <Menu.Item key="setting:1"><a onClick={this.goBack}>退出</a></Menu.Item>
+          <Menu.Item key="setting:1"><a onClick={this.goBack}>Quit</a></Menu.Item>
           </SubMenu>
           
         </Menu>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon,Switch } from 'antd';
 import {Link } from "react-router-dom";
-import { allMenu } from '../../utils/menu';
+import { allMenu } from '../utils/menu';
 import Top from './top';
 import Content from './content';
 import './index.scss';
@@ -48,9 +48,9 @@ class Index extends Component {
           onCollapse={this.onCollapse}
           className="leftMenu"
         >
-          {this.state.theme === 'light' ? <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github" /></a> :
-            <a href="https://github.com/MuYunyun/react-antd-demo" target='_blank' rel='noopener noreferrer'><Icon type="github" className="github white" /></a> }
-          { this.state.theme === 'light' ? <span className="author">ruanmou</span> : <span className="author white">ruanmou</span> }
+          {this.state.theme === 'light' ? <Icon type="github" className="github" />:
+            <Icon type="github" className="github white" /> }
+          { this.state.theme === 'light' ? <span className="author">CDIG</span> : <span className="author white">CDIG</span> }
           <Menu
             theme={this.state.theme}
             onClick={this.handleClick}
@@ -92,10 +92,10 @@ class Index extends Component {
         <Layout>
           <Top toggle={this.toggle} collapsed={this.state.collapsed} history={this.props.history}/> 
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-            main main
+            This is main
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            12321432432532
+            This is footer.
           </Footer>
         </Layout>
       </Layout>
