@@ -11,7 +11,7 @@ class Contents extends Component {
     return (
       <Content className="content">
          <Route  path="/index" component={Home}></Route> 
-         <Route path="/music" component={Music}></Route>
+         <Route  path="/music" component={Music}></Route>
          
       </Content>
     );

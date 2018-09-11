@@ -13,7 +13,7 @@ class Home extends Component {
   };
 
   getData = () =>{
-      get ('/cms_chart').then((res) =>{
+      get('/cms_chart').then((res) =>{
           console.log(res);
           let data = JSON.parse(res);
           if (data.code == '200'){
