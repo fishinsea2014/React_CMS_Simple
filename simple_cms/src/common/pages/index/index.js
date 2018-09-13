@@ -65,7 +65,7 @@ class Index extends Component {
                   return (
                     <SubMenu key={subMenu.url} title={<span><Icon type={subMenu.icon} /><span>{subMenu.name}</span></span>}>
                       {subMenu.children.map(menu => (
-                        <Menu.Item key={menu.url}><Link to={`/${menu.url}`}>{menu.name}</Link></Menu.Item>
+                        <Menu.Item key={menu.url}><Link to={`/index/${menu.url}`}>{menu.name}</Link></Menu.Item>
                       ))}
                     </SubMenu>
                   )

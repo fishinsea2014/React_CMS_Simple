@@ -10,8 +10,8 @@ class Contents extends Component {
   render() {
     return (
       <Content className="content">
-         <Route  path="/index" component={Home}></Route> 
-         <Route  path="/music" component={Music}></Route>
+         <Route  exact path="/index" component={Home}></Route> 
+         <Route  path="/index/music" component={Music}></Route>
          
       </Content>
     );
