@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import Home from '../home';
 import Music from '../music';
 import Tools from '../tools';
+import Editor from '../editor';
 import './content.scss'
 const { Content } = Layout;
 
@@ -14,6 +15,8 @@ class Contents extends Component {
          <Route  exact path="/index" component={Home}></Route> 
          <Route  path="/index/music" component={Music}></Route>
          <Route  path="/index/tools" component={Tools}></Route>
+         <Route  path="/index/editor" component={Editor}></Route>
+
          
       </Content>
     );

@@ -114,14 +114,14 @@ class Music extends Component {
   }
 
   render() {
-    const data = [{name:'a',id:1},{name:'b',id:2},{name:'c',id:3}];
+    const data = [{name:'Pop Music',id:1},{name:'Classic Music',id:2},{name:'Rock Music',id:3}];
     return (
       <div>
         <h3>The following data is fetched from </h3>
         <h3>http://tingapi.ting.baidu.com/v1/restserver/ting?xml&calback=&from=webapp_music&method=baidu.ting.billboard.billList&size=100&offset=0</h3>
         <h3>by get method</h3>
         <Select defaultValue={data[0].name} style={{ width: 120 }} onChange={()=>this.handleChange}>
-          {
+          {            
             data.map((item,index)=><Option value={item.name}>{item.name}</Option>)
           }
         </Select>
