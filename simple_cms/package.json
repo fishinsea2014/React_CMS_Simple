@@ -9,7 +9,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
-    "draftjs-to-html": "^0.8.3",
+    "draftjs-to-html": "^0.8.4",
     "draftjs-to-markdown": "^0.5.1",
     "echarts": "^4.1.0",
     "echarts-for-react": "^2.0.14",
