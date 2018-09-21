@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Index from './pages/index'
@@ -21,3 +22,5 @@ const routes = (
 )
 
 export default routes;
+
+
