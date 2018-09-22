@@ -90,7 +90,7 @@ class Music extends Component {
       //Fetch data by iteration
       for(var i=0;i<songList.length;i++){
         arr.push({
-          //key: songList[i].album_id,
+          key: songList[i].album_id,
           title: songList[i].album_title,
           author: songList[i].author,
           country: songList[i].country,
