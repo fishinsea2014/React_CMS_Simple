@@ -40,7 +40,7 @@ const todoListInit = [
         complete: false
     },
     {
-        id: -3,
+        id: -1,
         text: 'Project plan',
         complete: false
     }
@@ -48,7 +48,7 @@ const todoListInit = [
 
 export const todoList = handleActions({
     'ADD_TODO' (state, action){
-        console.log(action.payload); //action.payload acquire action object
+        console.log('reducer_todolist',...state, action.payload); //action.payload acquire action object
         return [
             ...state,
             todo(undefined, action.payload)
@@ -64,4 +64,15 @@ export const todoList = handleActions({
     },
 }, todoListInit)
 
+//Set the initiate value of state
+const setVisibilityInit = {
+    filter : 'SHOW_ALL',
+}
+
+
+export const setVisibility = handleActions({
+    'SET_VISIBILITY' (state, action){
+        return {...state, ...action.payload}
+    }
+}, setVisibilityInit)
 
