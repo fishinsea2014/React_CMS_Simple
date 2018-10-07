@@ -6,7 +6,7 @@
     
 
 + SCREENSHOT
-![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_login.jpg)
+![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_login.png)
 
 ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_home.jpg)
 
