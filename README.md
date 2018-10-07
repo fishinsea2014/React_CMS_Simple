@@ -1,6 +1,5 @@
 # React_CMS_Simple
-This is an exercise project for practicing React. The main features include: node.js server,  login, home, chart, music list, salary caculator, todos management, galary. It utilises React.js, Echarts, Node.js, MySql, HTML5, CSS3,JS,Jquery and sass.
-
+The project is an exercise project for practising React. The main features include node.js server, login, home, chart, music list, salary calculator, todos management, gallery. It utilises React.js, Echarts, Node.js, MySql, HTML5, CSS3,JS,Jquery and sass.
 + How to run?
     + node simple-server.js
     + npm start
