@@ -1,13 +1,13 @@
 # React_CMS_Simple
-# This is a simple Content Management System, which is developed by React and Node. 
+This is an exercise project for practicing React. The main features include: node.js server,  login, home, chart, music list, salary caculator, todos management, galary. It utilises React.js, Echarts, Node.js, MySql, HTML5, CSS3,JS,Jquery and sass.
 
-+ Dependencies
-    + Ant design
++ How to run?
+    + node simple-server.js
+    + npm start
     
 
 + SCREENSHOT
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_login.png)
-
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_home..jpg)
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_music.jpg)
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_salary.jpg)
@@ -16,8 +16,4 @@
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_event.jpg)
 
 Notes:
-+ Utilise scss
-    + npm run eject (display config files)
-    + npm install node-sass --save
-    + npm install sass-loader --save
-    + Add scss config segment in confit file.
++ Utilise scss    
