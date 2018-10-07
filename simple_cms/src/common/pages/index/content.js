@@ -7,6 +7,7 @@ import Tools from '../tools';
 import Editor from '../editor';
 import Gallery from '../gallary';
 import './content.scss';
+import TodoList from '../todoList';
 const { Content } = Layout;
 
 class Contents extends Component {
@@ -18,7 +19,7 @@ class Contents extends Component {
          <Route  path="/index/tools" component={Tools}></Route>
          <Route  path="/index/editor" component={Editor}></Route>
          <Route  path="/index/album" component={Gallery}></Route>
-
+         <Route  path="/index/todoList" component={TodoList}></Route>
          
       </Content>
     );
