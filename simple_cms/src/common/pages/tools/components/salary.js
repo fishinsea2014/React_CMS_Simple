@@ -22,7 +22,7 @@ class Salary extends Component {
       let acc = data*0.014;
       let kiwiSaver = data*0.03;
       let studentLoan = data*0.0752;
-      let takeHome = data-paye-acc-kiwiSaver-studentLoan;
+      let takeHome = (data-paye-acc-kiwiSaver-studentLoan).toFixed(2);
       this.setState({
           paye:paye,
           acc:acc,
