@@ -8,8 +8,12 @@
 + SCREENSHOT
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_login.png)
 
-    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_home.jpg)
+    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_home..jpg)
     + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_music.jpg)
+    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_salary.jpg)
+    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_todo.jpg)
+    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_editor.jpg)
+    + ![image](https://github.com/fishinsea2014/React_CMS_Simple/blob/master/screenshot/react_event.jpg)
 
 Notes:
 + Utilise scss
